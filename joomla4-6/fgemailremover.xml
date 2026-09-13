@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <extension version="3.1" type="plugin" group="system" method="upgrade">
     <name>PLG_SYSTEM_FGEMAILREMOVER</name>
     <author>Fero</author>
@@ -11,7 +11,7 @@
     <namespace path="src">FG\Plugin\System\Fgemailremover</namespace>
 
     <updateservers>
-        <server type="extension" priority="1" name="PLG_SYSTEM_FGEMAILREMOVER">https://raw.githubusercontent.com/ferino75/plg_system_fgemailremover/master/updates.xml</server>
+        <server type="extension" priority="1" name="PLG_SYSTEM_FGEMAILREMOVER">https://raw.githubusercontent.com/FGcodework/plg_system_fgemailremover/master/updates.xml</server>
     </updateservers>
 
     <files>
