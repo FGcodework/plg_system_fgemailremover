@@ -1,11 +1,11 @@
 # Changelog
 
-## joomla4-6/ v1.8.3 - 2026-09-23
-# The actual fix this time for another instance of the broken admin Save/Save & Close buttons - discovered on Joomla 5.4.8's Atum template, which renders a field's *description* text as raw, unescaped HTML inside a hidden "inline help" `<small>` element (a newer Joomla 5 UI feature, toggled via the toolbar's "Toggle Inline Help" button) - a genuinely different rendering path than the tooltip `data-content` attribute used elsewhere (and safely escaped there), which is why this slipped through the earlier v1.7.9 label-only fix. Two field descriptions still contained literal, unescaped tag-like text: "Audit mode"'s `<script>`/`<style>` mentions, and "Image CSS class"'s `<img>` mention - both reworded to drop the angle brackets entirely (matching the same fix already applied to the "Audit mode" label back in v1.7.9). The new "Support this plugin" note's `<a href='...'>Ko-fi</a>` link is unaffected and stays as-is - a single, well-formed, self-closed inline link poses none of the "unclosed raw-text element" risk that `<script>`/`<style>` do, unlike a void element like `<img>` with no risk of swallowing later content either, but removed anyway since it added no value over plain text
-+ Confirmed via a full sweep of all four language files that no other field label or description contains stray angle brackets or unescaped embedded quotes, closing out both classes of this bug across the whole plugin, not just the one field that happened to break this time
+## joomla4-6/ v1.9.0 - 2026-09-23
+# Fixes the same broken admin Save/Save & Close buttons as v1.8.3 was meant to (that fix wasn't pushed before this release, so it's included here too) - two field descriptions ("Audit mode", "Image CSS class") still contained literal, unescaped `<script>`/`<style>`/`<img>` text, which some Joomla templates render as raw HTML inside a hidden "inline help" element rather than a safely-escaped attribute. Both reworded to drop the angle brackets entirely
++ Reorganises the Options tab into two: the built-in "Plugin" tab now shows only the plugin's own info (name, description) plus a short "Support this plugin" note - no configuration fields; a new "Settings" tab holds every actual parameter (replacement mode, exceptions, image options, logging, audit mode). Matches the info/settings tab split used by extensions like Mediabox CK, done natively via two `<fieldset>` blocks - only the second one has a `label`, which is what makes Joomla render it as its own tab
 
-## v1.15.3 - 2026-09-23
-Same fix as joomla4-6/ v1.8.3 above, ported to this build
+## v1.16.0 - 2026-09-23
+Same fixes as joomla4-6/ v1.9.0 above, ported to this build
 
 ## joomla4-6/ v1.8.2 - 2026-09-23
 + Adds a small, static "Support this plugin" note at the end of the Options tab in the plugin's admin settings - a one-line mention that the plugin is free/open source with an optional Ko-fi tip link, matching what's already in the README. Purely informational (a Joomla `note` field, no interactivity, no new code paths) - not a donation widget

@@ -5,7 +5,7 @@
     <creationDate>August 2026</creationDate>
     <copyright>Copyright (C) 2026 Fero. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later</license>
-    <version>1.8.3</version>
+    <version>1.9.0</version>
     <description>PLG_SYSTEM_FGEMAILREMOVER_XML_DESCRIPTION</description>
 
     <namespace path="src">FG\Plugin\System\Fgemailremover</namespace>
@@ -30,6 +30,14 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
+                <field
+                    name="support_note"
+                    type="note"
+                    label="PLG_SYSTEM_FGEMAILREMOVER_FIELD_SUPPORT_LABEL"
+                    description="PLG_SYSTEM_FGEMAILREMOVER_FIELD_SUPPORT_DESC"
+                />
+            </fieldset>
+            <fieldset name="settings" label="PLG_SYSTEM_FGEMAILREMOVER_FIELDSET_SETTINGS">
                 <field
                     name="replacement_mode"
                     type="list"
@@ -117,12 +125,6 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field
-                    name="support_note"
-                    type="note"
-                    label="PLG_SYSTEM_FGEMAILREMOVER_FIELD_SUPPORT_LABEL"
-                    description="PLG_SYSTEM_FGEMAILREMOVER_FIELD_SUPPORT_DESC"
-                />
             </fieldset>
         </fields>
     </config>
