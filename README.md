@@ -11,6 +11,7 @@
   <a href="https://extensions.joomla.org/extension/access-a-security/site-security/email-remover/"><img src="https://img.shields.io/badge/Joomla!%20Extensions%20Directory%E2%84%A2-EmailRemover-blue" alt="JED"></a>
   <img src="https://img.shields.io/badge/license-GPL--2.0-green.svg" alt="License">
   <img src="https://img.shields.io/github/downloads/FGcodework/plg_system_fgemailremover/total?cacheSeconds=3600" alt="Downloads">
+  <a href="https://ko-fi.com/FGcodework"><img src="https://img.shields.io/badge/support-Ko--fi-F16061.svg?logo=ko-fi&logoColor=white" alt="Support on Ko-fi"></a>
 </p>
 
 A Joomla **system plugin** that strips email addresses out of the public-facing HTML output of a site, so they can never be scraped by spam harvesters — because they simply never reach the page in the first place.
@@ -75,6 +76,10 @@ This is a deliberate trade-off, not an oversight: safely rewriting arbitrary thi
 ## Why remove instead of cloak?
 
 Classic cloaking (splitting the address into DOM fragments reassembled by JS, or CSS-generated content) only stops the crudest scrapers doing plain-text regex matching over raw HTML — a scraper that reads the same DOM attributes or runs a headless browser sees the address just as easily as a real visitor. Full removal (or rendering as an image with no literal address text anywhere in the source) closes that gap entirely, at the cost of losing one-click `mailto:` convenience for visitors — which the plugin's text/image replacement can offset (e.g. by linking to a contact form instead).
+
+## Support this project
+
+This plugin is free, open source, and always will be — no feature is locked behind a paywall. If it's saved you time or kept your site's inbox a little cleaner, you can leave a one-off tip on [Ko-fi](https://ko-fi.com/FGcodework). Entirely optional either way.
 
 ## License
 
