@@ -1,5 +1,11 @@
 # Changelog
 
+## joomla4-6/ v1.9.1 - 2026-09-23
+^ Adds a link to https://fgcodework.github.io/ (the FG extensions overview page) in the "Support this plugin" note, alongside the existing Ko-fi mention - so anyone finding this plugin useful can easily discover the rest of the FG series too
+
+## v1.16.1 - 2026-09-23
+Same change as joomla4-6/ v1.9.1 above, ported to this build
+
 ## joomla4-6/ v1.9.0 - 2026-09-23
 # Fixes the same broken admin Save/Save & Close buttons as v1.8.3 was meant to (that fix wasn't pushed before this release, so it's included here too) - two field descriptions ("Audit mode", "Image CSS class") still contained literal, unescaped `<script>`/`<style>`/`<img>` text, which some Joomla templates render as raw HTML inside a hidden "inline help" element rather than a safely-escaped attribute. Both reworded to drop the angle brackets entirely
 + Reorganises the Options tab into two: the built-in "Plugin" tab now shows only the plugin's own info (name, description) plus a short "Support this plugin" note - no configuration fields; a new "Settings" tab holds every actual parameter (replacement mode, exceptions, image options, logging, audit mode). Matches the info/settings tab split used by extensions like Mediabox CK, done natively via two `<fieldset>` blocks - only the second one has a `label`, which is what makes Joomla render it as its own tab
