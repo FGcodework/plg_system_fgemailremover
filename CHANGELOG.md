@@ -1,5 +1,11 @@
 # Changelog
 
+## joomla4-6/ v1.8.2 - 2026-09-23
++ Adds a small, static "Support this plugin" note at the end of the Options tab in the plugin's admin settings - a one-line mention that the plugin is free/open source with an optional Ko-fi tip link, matching what's already in the README. Purely informational (a Joomla `note` field, no interactivity, no new code paths) - not a donation widget
+
+## v1.15.2 - 2026-09-23
+Same addition as joomla4-6/ v1.8.2 above, ported to this build
+
 ## joomla4-6/ v1.8.1 - 2026-08-09
 ^ Reduces the generated image's horizontal padding from 6px to 2px (CSS/display px) - the previous padding made the address visibly indented compared to plain-text sibling lines (e.g. a contact card's name/phone rows), since the image itself carried extra blank space on its left edge that the surrounding text doesn't have. A small amount is still kept, rather than 0, so anti-aliased glyph edges - especially italic/oblique fonts or slightly-overhanging first/last characters - are never clipped right at the canvas boundary. Vertical padding is unchanged
 + Bumps `IMAGE_RENDERER_VERSION` so every existing cached image regenerates automatically with the new, tighter padding - no manual cache clearing needed

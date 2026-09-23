@@ -5,7 +5,7 @@
     <creationDate>August 2026</creationDate>
     <copyright>Copyright (C) 2026 Fero. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later</license>
-    <version>1.15.1</version>
+    <version>1.15.2</version>
     <description>PLG_SYSTEM_FGEMAILREMOVER_XML_DESCRIPTION</description>
 
     <updateservers>
@@ -114,6 +114,12 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
+                <field
+                    name="support_note"
+                    type="note"
+                    label="PLG_SYSTEM_FGEMAILREMOVER_FIELD_SUPPORT_LABEL"
+                    description="PLG_SYSTEM_FGEMAILREMOVER_FIELD_SUPPORT_DESC"
+                />
             </fieldset>
         </fields>
     </config>
