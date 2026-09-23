@@ -1,5 +1,12 @@
 # Changelog
 
+## joomla4-6/ v1.8.3 - 2026-09-23
+# The actual fix this time for another instance of the broken admin Save/Save & Close buttons - discovered on Joomla 5.4.8's Atum template, which renders a field's *description* text as raw, unescaped HTML inside a hidden "inline help" `<small>` element (a newer Joomla 5 UI feature, toggled via the toolbar's "Toggle Inline Help" button) - a genuinely different rendering path than the tooltip `data-content` attribute used elsewhere (and safely escaped there), which is why this slipped through the earlier v1.7.9 label-only fix. Two field descriptions still contained literal, unescaped tag-like text: "Audit mode"'s `<script>`/`<style>` mentions, and "Image CSS class"'s `<img>` mention - both reworded to drop the angle brackets entirely (matching the same fix already applied to the "Audit mode" label back in v1.7.9). The new "Support this plugin" note's `<a href='...'>Ko-fi</a>` link is unaffected and stays as-is - a single, well-formed, self-closed inline link poses none of the "unclosed raw-text element" risk that `<script>`/`<style>` do, unlike a void element like `<img>` with no risk of swallowing later content either, but removed anyway since it added no value over plain text
++ Confirmed via a full sweep of all four language files that no other field label or description contains stray angle brackets or unescaped embedded quotes, closing out both classes of this bug across the whole plugin, not just the one field that happened to break this time
+
+## v1.15.3 - 2026-09-23
+Same fix as joomla4-6/ v1.8.3 above, ported to this build
+
 ## joomla4-6/ v1.8.2 - 2026-09-23
 + Adds a small, static "Support this plugin" note at the end of the Options tab in the plugin's admin settings - a one-line mention that the plugin is free/open source with an optional Ko-fi tip link, matching what's already in the README. Purely informational (a Joomla `note` field, no interactivity, no new code paths) - not a donation widget
 
