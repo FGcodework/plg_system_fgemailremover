@@ -79,7 +79,9 @@ Classic cloaking (splitting the address into DOM fragments reassembled by JS, or
 
 ## Support this project
 
-This plugin is free, open source, and always will be — no feature is locked behind a paywall. If it's saved you time or kept your site's inbox a little cleaner, you can leave a one-off tip on [Ko-fi](https://ko-fi.com/FGcodework). Entirely optional either way.
+This plugin is free, open source, and always will be — no feature is locked behind a paywall. If it's saved you time or kept your site's inbox a little cleaner, you can leave a one-off tip on Ko-fi. Entirely optional either way.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C3Q327JDVM)
 
 ## License
 
