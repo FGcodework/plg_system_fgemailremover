@@ -1,5 +1,10 @@
 # Changelog
 
+## joomla4-6/ v1.9.2 - 2026-09-24
+# Fixes the field help (descriptions) in the plugin's admin settings: the manifest was missing Joomla's `<inlinehelp button="show"/>` config flag, so the "Toggle Inline Help" toolbar button did nothing at all - the descriptions weren't wired up to it and were instead always printed under every field. Now the descriptions are hidden by default and shown/hidden with that toolbar button, the same way as in Joomla's own core extensions (Joomla 4+ no longer uses hover tooltips on field labels - the inline help button is its replacement). The "Support this plugin" note is unaffected and stays visible
+
+(This release only touches the joomla4-6/ build - the classic J3.10 build (root) is unaffected and stays at v1.16.1; Joomla 3 shows field descriptions as hover tooltips natively.)
+
 ## joomla4-6/ v1.9.1 - 2026-09-23
 ^ Adds a link to https://fgcodework.github.io/ (the FG extensions overview page) in the "Support this plugin" note, alongside the existing Ko-fi mention - so anyone finding this plugin useful can easily discover the rest of the FG series too
 
