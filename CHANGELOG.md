@@ -1,5 +1,11 @@
 # Changelog
 
+## joomla4-6/ v1.9.3 - 2026-09-26
+^ Redesigns the "Support this plugin" note on the Plugin tab: a short bold intro line, the official Ko-fi button image, and a "More FG Extensions" button linking to https://fgcodework.github.io/ (styled to match the Atum admin template's own buttons), side by side. The note no longer has a separate heading/label - the intro line itself serves that purpose. A scoped `<style>` rule suppresses Atum's automatic external-link icon on the Ko-fi image link only. Verified the markup is fully self-closed (the `<style>` block can't swallow any following form markup - the root cause of the earlier broken Save buttons) and parses identically under both INI scanner modes
+
+## v1.16.2 - 2026-09-26
+Same change as joomla4-6/ v1.9.3 above, ported to this build. On Joomla 3.10 (Isis template, Bootstrap 2) the Bootstrap 5 layout classes and Atum colour variables simply don't apply, so the note falls back to a plain stacked layout with a standard Isis button - fully functional, just less polished
+
 ## joomla4-6/ v1.9.2 - 2026-09-24
 # Fixes the field help (descriptions) in the plugin's admin settings: the manifest was missing Joomla's `<inlinehelp button="show"/>` config flag, so the "Toggle Inline Help" toolbar button did nothing at all - the descriptions weren't wired up to it and were instead always printed under every field. Now the descriptions are hidden by default and shown/hidden with that toolbar button, the same way as in Joomla's own core extensions (Joomla 4+ no longer uses hover tooltips on field labels - the inline help button is its replacement). The "Support this plugin" note is unaffected and stays visible
 
